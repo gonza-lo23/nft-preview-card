@@ -12,8 +12,8 @@
 
 body{
     display: grid;
-    grid-template-columns:150px 400px 150px ;
-    grid-template-rows: 10% 87% 10%;
+    grid-template-columns:1fr 2fr 1fr ;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas: 
     ". . ."
     ". container ."
@@ -24,17 +24,13 @@ body{
     font-size: 18px;
     background-color: var(--very-dark-blue-1);
 }
-img{
-    max-width: 100%;
-}
 .container{
     grid-area: container;
     padding: 25px;
     background-color: var(--very-dark-blue-2);
         display:grid;
-        align-items: center;
         grid-template-columns:auto;
-    grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
     grid-template-areas: 
     "nft"
     "hero"
@@ -46,18 +42,28 @@ img{
     border-radius: 10px;
 
 }
-.container .nft img {
-    display: grid;
-    justify-content: center;
-    border-radius: 5px;
+s
+.container .nft img:hover {
+    cursor: pointer;
+    color: var(--cyan);
+    transition:0.1s ;
+    background: #fff;
 }
-.container h2{
-    grid-area: hero;
+
+
+.container .hero h2{
+    grid-area:hero;
     display: grid;
     justify-content: left;
     color: #fff;
 }
-.container p{
+
+.container .hero h2:hover{
+    cursor: pointer;
+    color: var(--cyan);
+    transition:0.1s ;
+}
+.container .hero p{
     grid-area:text;
     display: flex;
     
@@ -104,10 +110,9 @@ img{
 
 }
 .avatar{
-    grid-area: avatar;
+  grid-area: avatar;
   display: flex;
-  flex-direction: row;
-margin: auto;      
+  flex-direction: row;  
 }
 .avatar img{
    max-width: 10%;
@@ -120,6 +125,11 @@ margin: auto;
 .avatar .text-white{
     margin-left: 5px;
     color: #fff;
+}
+.avatar .text-white:hover{
+   cursor:pointer;
+   color: var(--cyan);
+    transition:0.1s ;
 }
 
 
